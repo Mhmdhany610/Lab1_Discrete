@@ -245,11 +245,27 @@ def infer(expr1: str, expr2: str) -> str:
     return f"{result.get_representation()} ({engine.last_rule.name}) "
 
 
-# def main():
-#     pass  # TODO: your program (input / output)
+#def run_part1():
+    
 
 
-# if __name__ == "__main__":
-#     main()
+def run_part2():
+    e1 = input("First expression: ")
+    e2 = input("Second expression: ")
+    try:
+        print(infer(e1, e2))
+    except ValueError:
+        print("Wrong expression")
 
+
+def main():
+    # print("=== Part 1: Logical Expressions Solver ===")
+    # run_part1()
+    # print()
+    print("=== Part 2: Inference Engine ===")
+    run_part2()
+
+
+if __name__ == "__main__":
+    main()
 
